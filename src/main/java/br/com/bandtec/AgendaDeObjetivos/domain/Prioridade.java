@@ -8,6 +8,8 @@ public class Prioridade {
 	private String nome;
 	private String observacoes;
 	
+	
+	
 	protected Prioridade() {}
 
 	public Prioridade(String nome, String observacoes) {

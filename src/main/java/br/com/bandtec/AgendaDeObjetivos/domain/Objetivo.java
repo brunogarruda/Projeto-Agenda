@@ -7,6 +7,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,6 +24,10 @@ public class Objetivo {
 	@JsonProperty
 	private String titulo;
 	
+	@ManyToOne
+	@JoinColumn(name="id_usuario")
+	private Usuario usuario;
+	
 	@JsonProperty
 	private String descricao;
 	
@@ -32,6 +38,9 @@ public class Objetivo {
 	@Embedded
 	@JsonProperty
 	private Prioridade prioridade;
+	
+	
+	
 	
 	public Objetivo() {}
 	
